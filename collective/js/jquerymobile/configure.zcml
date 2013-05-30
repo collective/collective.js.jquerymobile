@@ -7,8 +7,25 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <browser:resourceDirectory
-      name="collective.js.jquerymobile"
-      directory="resources"
+      name="collective.js.jquerymobile.theme"
+      directory="theme"
       />
+  <browser:resource
+      name="collective.js.jquerymobile.structure.min.css"
+      file="jquery.mobile.structure.css"
+      />
+  <browser:resource
+      name="collective.js.jquerymobile.js"
+      file="jquery.mobile.js"
+      />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.js.jquerymobile"
+      directory="profiles/default"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <include file="upgrades.zcml" />
 
 </configure>
